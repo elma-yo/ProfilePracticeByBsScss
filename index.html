@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BS Profile</title>
+    <link rel="stylesheet" href="./stylesheets/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!--Bootstrap官方icons的網站下方 -> CDN -> 複製link -> 貼到 html 的 head 就可以用 BS 的 icon -->
+    <!-- <style>
+        /* 把指此用一兩次的設定，直接寫在 style 中 */
+        .bg-cover {
+            background-size: cover;
+            background-position: center center; /* 置中 */
+            background-repeat: no-repeat;
+        }
+        .bg-attachment-fixed {
+            background-attachment: fixed;
+            /* 將背景固定在原位 */
+        }
+        .bg-dark-gradient {
+            background-image: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.8));
+            /* linear-gradient(方向性, 色彩) 線性漸層 */
+            /* deg 角度   180deg 由上而下 */
+            /* rgba rgb顏色＋a透明度   透明度為0~1，1為完全不透明 */
+        }
+        .object-fit-cover {
+            object-fit: cover;
+            /* 能將原圖片超出設定外框尺寸的地方，裁切掉 */
+        }
+        
+        /* object-fit-cover 與 bg-attachment-fixed 已加入utilities中 */
+        /* bg-cover 與 bg-dark-gradient 已加入 components/_utilities-others.scss 中 */
+    </style> -->
+</head>
+<body>
+    <header class="min-vh-100 position-relative">
+        <!-- min-vh-100 當內容比較少時，至少會有100%的高度，但內容比較多的時候，超過100%也沒關係 -->
+        <!-- position-relative 相對定位 -->
+        <div class="deco-box position-absolute top-0 start-0">
+            <!-- position-absolute 絕對定位 top-0 start-0 設置在左上 -->
+        </div>
+        <div class="deco-box position-absolute bottom-0 end-0">
+            <!-- position-absolute 絕對定位 bottom-0 end-0 設置在右下 -->
+        </div>
+        <div class="position-absolute bg-cover bg-attachment-fixed" style="top: 30px; right: 30px; bottom: 30px; left: 30px; background-image: url(https://images.unsplash.com/photo-1612282130134-49784d98ac61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1218&q=80);"></div>
+        <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+            <!-- top-50 start-50 translate-middle 置中設定 -->
+            <h1 class="display-1 fw-bold">陳 六角</h1> <!-- fw font-weight -->
+            <hr class="mb-1 mx-n5"> 
+            <!-- <hr> 水平線、分隔線  
+                mx-n5 n為負值的意思，這個設定可讓此水平線比文字寬度還要長，
+                但此設定要到 _variables.scss 中開啟 $enable-negative-margins 為 true -->
+            <h2>Hex Chen</h2>
+            <p>愛、勇氣與永不放棄的心</p>
+        </div>
+    </header>
+
+    <div class="container py-5">
+        <div class="row gy-3 justify-content-center flex-md-row-reverse">
+            <!-- justify-content-center 做區域置中 -->
+            <!-- 為了行動版的排版是，圖片在上方，文字在下方，所以圖片的程式碼寫在前面 -->
+            <!-- 桌面版，左邊是文字，右邊是圖片。為此，要加上 flex-md-row-reverse -->
+            <!-- 手機版，圖片與文字之間的上下沒有間距，所以加上 gy-3  g:gutter -->
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1612282131240-6e878907d0f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1421&q=80" class="w-100 object-fit-cover" height="500" alt="author's image">
+            </div>
+            <div class="col-md-5 d-flex align-items-center">
+                <!-- 
+                    讓內部文字處在該區域的垂直置中的方法： 
+                    1. 外層加上 d-flex
+                    2. div 包 所有文字 ，讓內層文字標籤，不會因為d-flex，而由左至右橫向排列
+                    3. 外層加上 align-items-center
+                -->
+                <div>
+                    <h2 class="display-4">我的冒險故事：</h2>
+                    <p>
+                        你紙爸發全家聽，綠間不結縣我究，個毛亮高人。卻高酒死這形易止經我腳家立力還上這可......回男腦回義心便有當會兩水記生這自；演般否前出級就話萬水直無基可住。廣製因，全氣改我？
+                    </p>
+                    <p>
+                        為說過著因識空共十房比面科別工人人變童角力男馬媽手趣。明型大方失，經面事馬，來聲小施大；看地自一適，在書寫賽我在。子帶出麼如就味那解的：最半有手然能勢此精觀山好沒生快我足很麗而變最放，上英灣媽？
+                    </p>
+                    <a href="#" class="btn btn-outline-primary mt-4 w-100">
+                        <!-- w-100 width: 100% -->
+                        看更多我的冒險故事
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-light p-md-5 py-5 m-md-5">
+        <div class="container">
+            <h2 class="display-4 text-center mb-4">
+                我的實戰作品： 
+            </h2>
+            <div class="row row-cols-1 row-cols-lg-3 g-4">
+                <!-- row-cols-1 手機版：呈現單欄   row-cols-md-3 桌面版：呈現三欄 -->
+                <div class="col">
+                    <!-- Bootstrap官方文件 -> 文件 -> 元件- > 卡片 -> 圖片 -> 圖片 overlay 複製 code -->
+                    <div class="card text-white border-5 h-100">
+                        <!-- 每張 卡片card 和 圖片img 都加上 h-100 ，目的讓每張卡片都能撐滿整個範圍的高度，避免有圖片高度不一 -->
+                        <!-- 為了避免圖片在設為 h-100 後有變形的狀況，所以 圖片img 要再加上 object-fit-cover 的 class -->
+                        <img src="https://images.unsplash.com/photo-1560461396-ec0ef7bb29dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" class="card-img h-100 object-fit-cover" alt="card image">
+                        <div class="card-img-overlay top-auto bg-dark-gradient">
+                            <!-- 
+                                top-auto 讓此div內的標籤「置底」排列
+                                但要設定 top-auto ，必須要到 _variables.scss 中的 $position-values 內的最後方加上 auto: auto
+                            -->
+                            <h5 class="card-title">工整一致的設計規範</h5>
+                            <p class="card-text">正看了和無是本。眾今少山！期美斯經已家更，兒死自神有根平度如進？就的由？座國式達推知上格到：訴校構人給開收個認是策元。</p>
+                            <a href="#" class="btn btn-outline-light stretched-link w-100">看作品</a>
+                            <!-- w-100 讓該按鈕撐滿整個寬度 -->
+                            <!-- stretched-link  讓滑鼠滑入文字區就可以點擊按鈕，沒辦法滑入卡片就能直接點擊的原因是因為做了top-auto，然後top是由position-absolute設定，因此滑鼠在卡片上半部時，是無法點擊的 -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card text-white border-5 h-100">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" class="card-img h-100 object-fit-cover" alt="card image">
+                        <div class="card-img-overlay top-auto bg-dark-gradient">
+                            <h5 class="card-title">對於色彩細節苛刻要求</h5>
+                            <p class="card-text">簡或之此小修直說文度國留，展事生生海林是，他父之歷之紙一自氣滿媽程，此課個專該後員己響的式女時說旅學古目寶我。</p>
+                            <a href="#" class="btn btn-outline-light stretched-link w-100">看作品</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card text-white border-5 h-100">
+                        <img src="https://images.unsplash.com/photo-1565306257414-bbc84fdaaade?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80" class="card-img h-100 object-fit-cover" alt="card image">
+                        <div class="card-img-overlay top-auto bg-dark-gradient">
+                            <h5 class="card-title">忙碌之餘不忘新買的 iPhone</h5>
+                            <p class="card-text">和還出走方文走了辦過太他的足供上場室管料實隨招然主了縣：健風用開子案又出傷速他一、廠準我像點港半這，得者團好事形一！們人好來國專少知入這中長，展結去考車活灣下山本……來的熱根兩管著大指復兒風特房以說點。</p>
+                            <a href="#" class="btn btn-outline-light stretched-link w-100">看作品</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-primary p-5 text-white">
+        <div class="container">
+            <h2 class="display-4 text-center">做個朋友吧：</h2>
+            <div class="row justify-content-center">
+                <!-- 內側的格線總共10欄，分成5欄、5欄的兩個區塊 -->
+                <div class="col-md-5">
+                    <p>遇見到世界上另一個地方的您相當開心</p>
+                    <h3 class="h4">聯絡方式</h3>
+                    <!-- 因為h3標籤的字級較大，所以套用.h4讓字變小一點 -->
+                    <ul class="list-unstyled">
+                        <li>
+                            <i class="bi bi-envelope"></i>
+                            <!-- 直接複製貼上 BS icons 的 i標籤 -->
+                            voluptati@email.com
+                        </li>
+                        <li>
+                            <i class="bi bi-telephone"></i>
+                            0987-654-321
+                        </li>
+                    </ul>
+                    <h3 class="h4 mt-5">社群關注</h3>
+                    <ul class="list-unstyled">
+                    <li><i class="bi bi-instagram"></i> voluptati</li>
+                    <li><i class="bi bi-facebook"></i> fb.me/voluptati</li>
+                    <li><i class="bi bi-twitter"></i> voluptati</li>
+                    </ul>
+                    <p>© 2022 by 陳六角. created with Bootstrap 5.</p>
+                </div>
+                <form class="col-md-5 needs-validation" novalidate>
+                    <!-- 注意！！！表單的外層一定要有一個 form 標籤 -->
+                    <!-- 【驗證功能】
+                            1. form 標籤上要加上 .needs-validation ， 以及 novalidate（未驗證狀態）
+                            2. 表單最後需要有 submit 的提交按鈕 
+                            3. 還要加入相關的 JS 才能運作
+                                BS官方文件 -> 表單 -> 驗證 -> 自定義樣式 下方有 JS 的 code 可以直接複製並貼到body最下方的script標籤中，即可運作
+                    -->
+                    <div class="row g-2">
+                        <!-- 建議！在表單的 row 可以加上較小的 gutter -->
+                        <div class="col-md-6">
+                            <label for="validarionServer01" class="form-label">姓氏 *</label>
+                            <input type="text" class="form-control" id="validarionServer01" placeholder="王" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validarionServer02" class="form-label">名 *</label>
+                            <input type="text" class="form-control" id="validarionServer02" placeholder="小明" required>
+                            <div class="valid-feedback">
+                                <!-- valid-feedback 驗證成功的回饋 -->
+                                <!-- 
+                                    預設的 valid-feedback 為綠色，invalid-feedback 為紅色，但配在紫色的背景下，會看不清楚
+                                    改善方法：
+                                    第一種 - 
+                                        到 _variables.scss 中的  $theme-color 調整 $success 與 $danger 的色彩
+                                        但此方法會影響到全部的 $success 與 $danger 的色彩 都跟著做變動
+                                    第二種 - 
+                                        到 _variables.scss 中調整 $form-feedback-valid-color 與 $form-feedback-invalid-color 的色彩
+                                -->
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="mb-3 col-12">
+                          <label for="exampleFormControlInput1" class="form-label">Email *</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+                            <div class="invalid-feedback">
+                                <!-- invalid-feedback 驗證失敗的回饋 -->
+                                請輸入 Email，拜託
+                            </div>
+                        </div>
+                        <div class="mb-3 col-12">
+                            <label for="exampleFormControlTextarea1" class="form-label">留些訊息給我吧 *</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                        </div>
+                        <div class="text-end col-12">
+                            <!-- text-end 文字置右 -->
+                            <button type="submit" class="btn btn-outline-light">送出表單</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+            }, false)
+            })
+        })()
+    </script>
+</body>
+</html>

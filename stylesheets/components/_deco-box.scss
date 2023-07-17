@@ -1,0 +1,7 @@
+.deco-box {
+    height: 240px;
+    width: 240px;
+    background-color: $secondary;
+    // background-color: var(--bs-secondary);
+    // 在sass中可以直接用 變數名 ，不用var引用變數
+}
